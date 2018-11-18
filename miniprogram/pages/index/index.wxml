@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 扫一扫 DMS 码 -->
+  <view class="uploader">
+    <view bindtap="click" class="uploader-text"> 点我扫一扫</view>
+    <view>{{show}}</view>
+  </view>
+</view>

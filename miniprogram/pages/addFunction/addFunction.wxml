@@ -1,0 +1,11 @@
+<!--pages/addFunction/addFunction.wxml-->
+<view class="container">
+
+  <view class="guide">
+ <button class="copyBtn" bindtap="copyCode">扫描机身二维码</button>
+ 
+  <block wx:for="{{deviceList}}">
+    <view>{{index}}:{{item}}</view>
+  </block>
+</view>
+</view>

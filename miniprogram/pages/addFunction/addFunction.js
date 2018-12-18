@@ -74,7 +74,7 @@ Page({
       },
       fail: (res) => {
         wx.showToast({
-          title: "扫码失败",
+          title: "扫码失败了",
           icon: 'none',
           duration: 2000
         })

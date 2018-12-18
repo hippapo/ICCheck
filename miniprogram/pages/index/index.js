@@ -11,37 +11,28 @@ Page({
     show: "",
   },
 
-  onLoad: function() {
-     console.log('onload');
-    
-    },
-
   click: function () {
     var that = this;
     var show;
     wx.scanCode({
       success: (res) => {
-        this.show = res.result;
-        app.globalData.cResult = this.show;
-
-
-        console.log(app.globalData.cResult)
+        app.globalData.cResult = res.result;
         wx.navigateTo({
-          url: "../addFunction/addFunction?scan=" + this.show,
+          url: "../addFunction/addFunction",
           success: function(res) {},
           fail: function(res) {},
           complete: function(res) {},
         })
 
         wx.showToast({
-          title: '成功',
+          title: '扫码成功',
           icon: 'success',
           duration: 2000
         })
       },
       fail: (res) => {
         wx.showToast({
-          title: "fail",
+          title: "扫码失败",
           icon: 'none',
           duration: 2000
         })

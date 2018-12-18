@@ -3,8 +3,13 @@
 
   <view class="guide">
  <button class="copyBtn" bindtap="copyCode">扫描机身二维码</button>
- 
+    <view> 以下机子等待检查：</view>
   <block wx:for="{{deviceList}}">
+    <view>{{index}}:{{item}}</view>
+  </block>
+  <view>******************** </view>
+   <view> 以下机子记录有误：</view>
+    <block wx:for="{{deviceNotFoundList}}">
     <view>{{index}}:{{item}}</view>
   </block>
 </view>

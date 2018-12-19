@@ -1,9 +1,8 @@
 <!--index.wxml-->
-<view class="container">
+<view class="container" >
   <!-- 扫一扫 DMS 码 -->
-  <view class="uploader">
-    <view bindtap="click" class="uploader-text"> 请扫DMS二维码</view>
-    <van-button type="primary">按钮</van-button>
+
+    <van-button round type="danger" bindtap="click" class="uploader-text"> 请扫DMS二维码</van-button>
     <view>{{show}}</view>
-  </view>
+ 
 </view>

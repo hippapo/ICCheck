@@ -1,6 +1,9 @@
 //index.js
 const app = getApp()
 
+
+
+
 Page({
   data: {
     avatarUrl: './user-unlogin.png',
@@ -10,6 +13,8 @@ Page({
     requestResult: '',
     show: "",
   },
+
+  
 
   click: function () {
     var that = this;

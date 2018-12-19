@@ -2,7 +2,8 @@
 <view class="container">
   <!-- 扫一扫 DMS 码 -->
   <view class="uploader">
-    <view bindtap="click" class="uploader-text"> 点我扫一扫</view>
+    <view bindtap="click" class="uploader-text"> 请扫DMS二维码</view>
+    <van-button type="primary">按钮</van-button>
     <view>{{show}}</view>
   </view>
 </view>

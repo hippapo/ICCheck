@@ -5,7 +5,7 @@ App({
   onLaunch: function () {
     
     globalData: {
-      cResult: "hippotest"
+      cResult: "null"
     }
     this.globalData = {}
 

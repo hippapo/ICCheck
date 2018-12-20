@@ -5,3 +5,10 @@
   align-items: center;
   box-sizing: border-box;
 } 
+
+.goodBtn {
+  width: 80%;
+  background-color: rgb(252, 126, 67);
+  color: white;
+  border-radius: 98rpx;
+}

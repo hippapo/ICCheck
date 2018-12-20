@@ -31,7 +31,7 @@
       </block>
 
       <text>>********************</text>
-
+ 
       <text>以下机子记录有误：</text>
 
       <block wx:for="{{deviceNotFoundList}}">
@@ -42,5 +42,5 @@
   </view>
 
   <button class = "fixButton goodBtn" bindtap="copyCode">Fixed</button>
-  
+  <!--
 </view>

@@ -12,3 +12,20 @@
   color: white;
   border-radius: 98rpx;
 }
+
+.positionForFixedBtn {
+  margin-bottom: 60px;
+}
+
+.circleBtn {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 500px;
+  background-color: rgb(252, 126, 67);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 250px;
+  margin-top: 180px
+}

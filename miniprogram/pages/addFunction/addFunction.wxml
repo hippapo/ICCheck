@@ -1,7 +1,7 @@
 <!--pages/addFunction/addFunction.wxml-->
 <view class="container">
 
-  <view class="guide">
+  <view class="guide positionForFixedBtn">
       <text>以下机子等待检查：</text>
 
       <block wx:for="{{deviceList}}">
@@ -23,6 +23,6 @@
       </block>
   </view>
 
-  <button class = "fixButton goodBtn" bindtap="copyCode">Fixed</button>
+  <button class = "fixButton goodBtn" bindtap="copyCode">扫码点机</button>
   
 </view>

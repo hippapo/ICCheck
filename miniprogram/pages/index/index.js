@@ -1,9 +1,6 @@
 //index.js
 const app = getApp()
 
-
-
-
 Page({
   data: {
     avatarUrl: './user-unlogin.png',
@@ -13,15 +10,13 @@ Page({
     requestResult: '',
     show: "",
   },
-
   
-
   click: function () {
     var that = this;
     var show;
     wx.scanCode({
       success: (res) => {
-        app.globalData.cResult = res.result;
+        app.globalData.cResult = res.result.slice(7);
         wx.navigateTo({
           url: "../addFunction/addFunction",
           success: function(res) {},
@@ -46,7 +41,4 @@ Page({
       }
     })
   }
-
-
-  
 })

@@ -20,27 +20,7 @@
 />
   </block>
 </view>
-      <text>以下机子等待检查：</text>
-
-      <block wx:for="{{deviceList}}">
-        <van-cell
-          title="{{index}}"
-          value="{{item}}"
-          size="large"
-        />
-      </block>
-
-      <text>>********************</text>
- 
-      <text>以下机子记录有误：</text>
-
-      <block wx:for="{{deviceNotFoundList}}">
-        <view>
-          {{index}}:{{item}}
-        </view>
-      </block>
-  </view>
-
+      
   <button class = "fixButton goodBtn" bindtap="copyCode">Fixed</button>
-  <!--
+
 </view>

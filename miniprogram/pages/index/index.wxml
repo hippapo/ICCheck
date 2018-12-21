@@ -3,6 +3,5 @@
   <!-- 扫一扫 DMS 码 -->
 
     <button bindtap="click" class='scanDMSBtn'>扫描机库</button>
-    <view>{{show}}</view>
  
 </view>

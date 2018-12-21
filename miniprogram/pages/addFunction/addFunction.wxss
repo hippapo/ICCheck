@@ -2,7 +2,7 @@
 
 @import "../../style/guide.wxss";
 
-.marginTop {
+.marginBottom {
   margin-bottom: 20px
 
 }

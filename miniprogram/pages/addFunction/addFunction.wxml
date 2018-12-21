@@ -3,7 +3,7 @@
   <view class="guide" class='positionForFixedBtn'>
 
     <block wx:if="{{issueFound}}">
-      <view class='marginTop'>
+      <view class='marginBottom'>
         <van-cell
           title=" 以下机子记录有误："
           size="large"

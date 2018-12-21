@@ -6,11 +6,14 @@
   position: fixed;
   z-index: 9999;
   margin-bottom: 16px;
-  bottom: 0
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center
 }
 
 .positionForFixedBtn {
-  margin-bottom: 65px;
+  margin-bottom: 70px;
   width: 100%
 }
 

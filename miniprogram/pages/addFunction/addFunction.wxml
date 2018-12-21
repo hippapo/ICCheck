@@ -2,8 +2,6 @@
 
   <view class="guide" class='positionForFixedBtn'>
 
-    <button class='fixButton goodBtn'>扫描机身二维码</button>
-
     <text>以下机子等待检查：</text> 
 
     <block wx:for="{{deviceList}}">
@@ -25,6 +23,6 @@
 
   </view>
       
-  <button class = "fixButton goodBtn" bindtap="copyCode">Fixed</button>
+  <button class = "fixButton goodBtn" bindtap="copyCode">扫描机身二维码</button>
 
 </view>

@@ -13,22 +13,6 @@ Page({
     this.setData({ deviceList: app.globalData.cResult.split(";") })
   },
 
-  onUnload: function (option) {
-    wx.showModal({
-      title: 'hahahahah',
-      success: function (res) {
-        if (res.confirm) {
-          console.log('用户点击确定')
-        } else if (res.cancel) {
-          wx.navigateTo({
-            url: "../addFunction/addFunction",
-          })
-          console.log('用户点击取消')
-        }
-      }
-    })
-  },
-
   copyCode: function() {
     var that = this;
     var show;

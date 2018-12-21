@@ -1,28 +1,27 @@
+
 <!--pages/addFunction/addFunction.wxml-->
 <view class="container">
 
-  <view class="guide positionForFixedBtn">
-      <text>以下机子等待检查：</text>
-
-      <block wx:for="{{deviceList}}">
-        <van-cell
-          title="{{index}}"
-          value="{{item}}"
-          size="large"
-        />
-      </block>
-
-      <text>>********************</text>
-
-      <text>以下机子记录有误：</text>
-
-      <block wx:for="{{deviceNotFoundList}}">
-        <view>
-          {{index}}:{{item}}
-        </view>
-      </block>
-  </view>
-
-  <button class = "fixButton goodBtn" bindtap="copyCode">扫码点机</button>
+  <view class="guide">
+  <van-button  round type="danger" bindtap="copyCode" class="uploader-text"> 扫描机身二维码</van-button>
+    <view> 以下机子等待检查：</view>
+  <block wx:for="{{deviceList}}">
+  <van-cell
+  title="{{item}}"
+  size="large"
+/>
+  </block>
   
+   <view> 以下机子记录有误：</view>
+
+     <block wx:for="{{deviceNotFoundList}}">
+  <van-cell
+  title="{{item}}"
+  size="large"
+/>
+  </block>
+</view>
+      
+  <button class = "fixButton goodBtn" bindtap="copyCode">Fixed</button>
+
 </view>

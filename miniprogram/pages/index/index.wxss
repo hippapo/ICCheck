@@ -2,10 +2,12 @@
 
 .scanDMSBtn {
   margin-top: 900rpx;
-  margin-right: 170rpx
+  margin-right: 110rpx;
+  width: 40%;
+  color: #fff;
+  background-color: #353535;
+  border-radius:10px;
 }
-
-
 
 page{
 

@@ -8,9 +8,9 @@
 
 .goodBtn {
   width: 80%;
-  background-color: rgb(252, 126, 67);
-  color: white;
-  border-radius: 98rpx;
+  color: #fff;
+  background-color: #353535;
+  border-radius:10px;
 }
 
 .positionForFixedBtn {

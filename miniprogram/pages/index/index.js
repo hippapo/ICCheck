@@ -16,6 +16,7 @@ Page({
     var show;
     wx.scanCode({
       success: (res) => {
+        if(res.result.indexOf("data")!=-1){
         app.globalData.cResult = res.result.slice(7);
         wx.navigateTo({
           url: "../addFunction/addFunction",
@@ -23,12 +24,19 @@ Page({
           fail: function(res) {},
           complete: function(res) {},
         })
+        
 
         wx.showToast({
           title: '扫码成功',
           icon: 'success',
           duration: 2000
         })
+        } else {
+          wx.showToast({
+            title: "无效DMS二维码",
+            icon: 'none',
+            duration: 2000
+          }) }
       },
       fail: (res) => {
         wx.showToast({

@@ -3,7 +3,7 @@
   <!-- 扫一扫 DMS 码 -->
 
     <van-button round type="danger" bindtap="click" class="uploader-text"> 请扫DMS二维码</van-button>
-    <button bindtap="click" class='goodBtn'>请扫DMS二维码</button>
+    <button bindtap="click" class='circleBtn'>机库</button>
     <view>{{show}}</view>
  
 </view>

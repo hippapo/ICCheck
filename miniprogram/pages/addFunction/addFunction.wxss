@@ -4,8 +4,8 @@
 
 .fixButton{
   position: fixed;
-  bottom: 0;
-  margin-bottom: 40px;
   z-index: 9999;
+  margin-bottom: 16px;
+  bottom: 0
 }
 

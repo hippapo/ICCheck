@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "van-button": "/lib/vant/button/index"
-  }
+  },
+  "disableScroll": true
 }

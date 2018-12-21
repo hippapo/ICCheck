@@ -1,5 +1,10 @@
 /**index.wxss**/
 
+.scanDMSBtn {
+  margin-top: 900rpx;
+  margin-right: 170rpx
+}
+
 page{
 
   height: 100%;

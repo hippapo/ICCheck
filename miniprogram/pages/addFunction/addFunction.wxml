@@ -2,29 +2,31 @@
 
   <view class="guide" class='positionForFixedBtn'>
 
-<block wx:if="{{issueFound}}">
-  <view class='marginTop'>
-    <van-cell
-        title=" 以下机子记录有误："
-        size="large"
-        icon="clear"
-      />
+    <block wx:if="{{issueFound}}">
+      <view class='marginTop'>
+        <van-cell
+          title=" 以下机子记录有误："
+          size="large"
+          icon="clear"
+        />
 
-    <block wx:for="{{deviceNotFoundList}}">
+        <block wx:for="{{deviceNotFoundList}}">
   
-      <van-cell
-        title="{{item}}"
-        size="large"
-      />
-    </block>
+          <van-cell
+            title="{{item}}"
+            size="large"
+          />
+        </block>
  
-  </view>   
- </block>
-     <van-cell
-        title=" 以下机子等待检查"
-        size="large"
-        icon="question"
-      />
+      </view>   
+    </block>
+  
+    <van-cell
+      title=" 以下机子等待检查"
+      size="large"
+      icon="question"
+    />
+    
     <block wx:for="{{deviceList}}">
       <van-cell
         title="{{item}}"

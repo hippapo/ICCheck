@@ -2,6 +2,11 @@
 
 @import "../../style/guide.wxss";
 
+.marginTop {
+  margin-bottom: 20px
+
+}
+
 .fixButton{
   position: fixed;
   z-index: 9999;

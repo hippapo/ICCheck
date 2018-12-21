@@ -2,11 +2,10 @@
 var app = getApp();
 
 Page({
-
   data: {
-    result: '',
     deviceList: [],
-    deviceNotFoundList: []
+    deviceNotFoundList: [],
+    issueFound: false
   },
 
   onLoad: function (options) {
@@ -44,6 +43,7 @@ Page({
         if (matchResult == true) { matchResult = false } else {
           tempDeviceNotFoundList.push(this.show)
           this.setData({
+            issueFound: true,
             deviceNotFoundList: tempDeviceNotFoundList
           })
           wx.showToast({

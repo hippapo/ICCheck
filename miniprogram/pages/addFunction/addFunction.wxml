@@ -31,7 +31,8 @@
       <van-cell
         title="{{item}}"
         size="large"
-      />
+        class=""
+      ><button class='detail'>具体>></button></van-cell>
     </block>
   
   </view>

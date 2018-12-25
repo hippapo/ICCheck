@@ -38,6 +38,13 @@
   font-family: 微软雅黑;
 }
 
+.detail{
+  right: 0px;
+  font-family: 微软雅黑;
+  font-size: 100%;
+  width: 25%;
+}
+
 .positionForFixedBtn {
   margin-bottom: 70px;
   width: 100%

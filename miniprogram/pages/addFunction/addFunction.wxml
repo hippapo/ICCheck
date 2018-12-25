@@ -36,6 +36,6 @@
   
   </view>
       
-  <button class = "fixButton goodBtn" bindtap="copyCode">扫描机身二维码</button>
-
+  <button class = "scan" bindtap="copyCode">扫描</button>
+  <button class = "save" bindtap="">保存</button>
 </view>

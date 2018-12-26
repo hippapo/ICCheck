@@ -41,12 +41,12 @@
 .detail{
   right: 0px;
   font-family: 微软雅黑;
-  width: 40%;
+  width:18%;
   background-color: #ffffff;
   border-color: #ffffff;
   border-width: 0px;
   padding: 0px;
-  margin: 0px;
+  margin: 0px 0px 0px 65%;
   font-size: 14px;
 }
 
@@ -60,6 +60,7 @@
   margin-bottom: 70px;
   width: 100%;
   padding: 0px;
+  margin: 0px;
 }
 
 .maxWidth{

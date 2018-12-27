@@ -10,6 +10,10 @@ Page({
     requestResult: '',
     show: "",
   },
+
+  load:function(){
+
+  },
   
   click: function () {
     var that = this;

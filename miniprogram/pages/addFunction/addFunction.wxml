@@ -31,8 +31,7 @@
       <van-cell
         title="{{item}}"
         size="large"
-        class="maxWidth"
-      ><button class='detail detail-button-none-border'>更多</button></van-cell>
+      ><button class='detail detail-button-none-border' bindtap="getDeviceInfo" data-deviceID = "{{item}}">更多</button></van-cell>
     </block>
   
   </view>

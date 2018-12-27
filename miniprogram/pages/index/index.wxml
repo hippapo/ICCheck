@@ -2,5 +2,5 @@
 <view class= 'container' >
   <!-- 扫一扫 DMS 码 -->
     <button bindtap="click" class='scanDMSBtn'>扫描机库</button>
-    <button bindtap="" class='load'>读取记录</button>
+    <button bindtap="load" class='load'>读取记录</button>
 </view>

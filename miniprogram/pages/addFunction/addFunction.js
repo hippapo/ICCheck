@@ -12,6 +12,22 @@ Page({
     this.setData({ deviceList: app.globalData.cResult.split(";") })
   },
 
+  getDeviceInfo: function(e) {
+    console.log(e.currentTarget.dataset.deviceid.split(',')[0])
+    wx.cloud.callFunction({
+      // 云函数名称
+      name: 'getDevicesInfo',
+      // 传给云函数的参数
+      data: {
+        id: e.currentTarget.dataset.deviceid.split(',')[0],
+      },
+      success(res) {
+        console.log(res.result.data.location)
+      },
+      fail: console.error
+    })
+  },
+
   copyCode: function() {
     var that = this;
     var show;

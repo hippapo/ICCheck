@@ -1,7 +1,7 @@
 <!--pages/deviceInfo/deviceInfo.wxml-->
 
 <view class='pic-container'>
-  {{picUrl}}
+  <image class='device-image' src="{{picUrl}}"></image>
 </view>
 <view class='device-info-container'>
   <view class='device-info'>

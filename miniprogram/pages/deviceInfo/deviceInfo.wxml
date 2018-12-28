@@ -1,2 +1,8 @@
 <!--pages/deviceInfo/deviceInfo.wxml-->
-<text>pages/deviceInfo/deviceInfo.wxml</text>
+
+<view class='pic-container'>
+  {{picUrl}}
+</view>
+<view class='device-info-container'>
+  {{info}}
+</view>

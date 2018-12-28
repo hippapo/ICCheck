@@ -4,5 +4,16 @@
   {{picUrl}}
 </view>
 <view class='device-info-container'>
-  {{info}}
+  <view class='device-info'>
+    <text class='info-title'>Device Name: </text>
+    <text>{{name}}</text>
+  </view>
+  <view class='device-info'>
+    <text class='info-title'>OS: </text>
+    <text>{{os}}</text>
+  </view>
+  <view class='device-info'>
+    <text class='info-title'>Location: </text>
+    <text>{{location}}</text>
+  </view>
 </view>

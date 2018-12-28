@@ -23,8 +23,9 @@ Page({
       },
       success(res) {
         console.log(res.result.data.location)
+        console.log(res.result.data)
         wx.navigateTo({
-          url: "../deviceInfo/deviceInfo"
+          url: "../deviceInfo/deviceInfo?location=" + res.result.data.location + "&name=" + res.result.data.name + "&os=" + res.result.data.os + "&pic=" + res.result.data.pic
         })
       },
       fail: console.error

@@ -6,14 +6,26 @@ Page({
    */
   data: {
     picUrl: '/db/pic',
-    info: 'info',
+    name: 'Device Name',
+    location: 'location',
+    os: 'os'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var location_db = options.location
+    var pic_db = options.pic
+    var name_db = options.name
+    var os_db = options.os
 
+    this.setData({
+      picUrl: pic_db,
+      os: os_db,
+      name: name_db,
+      location: location_db
+    })
   },
 
   /**

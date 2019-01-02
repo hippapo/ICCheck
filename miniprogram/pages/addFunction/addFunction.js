@@ -5,18 +5,68 @@ Page({
   data: {
     deviceList: [],
     deviceNotFoundList: [],
-    issueFound: false
+    deviceConfirmList:[],
   },
 
   onLoad: function (options) {
+    var nthis = this
+    if(options.id != "NA"){
+      wx.cloud.callFunction({
+        // 云函数名称
+        name: 'checkRecordDetails',
+        // 传给云函数的参数
+        data: {
+          _id: options.id
+        },
+
+        success(res) {
+          console.log(res.result)
+          nthis.setData({
+            deviceList : res.result.data[0].pendingList,
+            deviceConfirmList: res.result.data[0].confirmList,
+            deviceNotFoundList: res.result.data[0].issueList
+          })
+
+          //console.log(res.result.data[0].description) // 3
+        },
+        fail: console.error
+      })
+    }else{
     this.setData({ deviceList: app.globalData.cResult.split(";") })
+    }
   },
 
+  saveRecord: function () {
+    wx.cloud.callFunction({
+      // 云函数名称
+      name: 'saveCheckRecords',
+      // 传给云函数的参数
+      data: {
+        operator: app.globalData.operatorInfo,
+        confirmList: this.data.deviceConfirmList,
+        pendingList: this.data.deviceList,
+        issueList: this.data.deviceNotFoundList,
+        //savedate: new Date().gettime(),
+        savedate: new Date().toLocaleString(),
+      },
+      
+      success(res) {
+        wx.showToast({
+          title: "保存成功",
+          icon: 'success',
+          duration: 3000
+        })
+        //console.log(res.result.data[0].description) // 3
+      },
+      fail: console.error
+    })
+  },
   copyCode: function() {
     var that = this;
     var show;
     var deviceIDList= new Array();
     var newDeviceList=new Array();
+    var newConfirmDeviceList = new Array();
     var tempDeviceNotFoundList = this.data.deviceNotFoundList;
     var matchResult = false;
     for (var i = 0; i < this.data.deviceList.length; i++) {
@@ -28,22 +78,25 @@ Page({
         this.show = res.result;
         for (var i = 0; i < this.data.deviceList.length; i++) {
           if (deviceIDList[i] == this.show) {
+            this.data.deviceConfirmList.push(this.data.deviceList[i])
             this.data.deviceList.splice(i, 1)
             newDeviceList = this.data.deviceList
+            newConfirmDeviceList = this.data.deviceConfirmList
             this.setData({
-              deviceList: newDeviceList
+              deviceList: newDeviceList, 
+              deviceConfirmList: newConfirmDeviceList
             })
             wx.showToast({
               title: "Found " + this.show,
               icon: 'success',
               duration: 3000
             })
-            matchResult = true}  
+            matchResult = true
+            }  
         }
         if (matchResult == true) { matchResult = false } else {
           tempDeviceNotFoundList.push(this.show)
           this.setData({
-            issueFound: true,
             deviceNotFoundList: tempDeviceNotFoundList
           })
           wx.showToast({

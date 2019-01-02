@@ -1,0 +1,13 @@
+// 云函数入口文件
+const cloud = require('wx-server-sdk')
+
+cloud.init(
+)
+const db = cloud.database()
+exports.main = async (event, context) => db.collection('checkRecordList').field({
+  issueList: true,
+  pendingList: true,
+  confirmList: true
+}).where({
+  _id: event._id
+}).get()

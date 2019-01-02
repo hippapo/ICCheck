@@ -1,8 +1,8 @@
 <view class="container">
-
+<button bindtap="saveRecord">保存</button>
   <view class="guide" class='positionForFixedBtn'>
 
-    <block wx:if="{{issueFound}}">
+    <block wx:if="{{deviceNotFoundList.length != 0}}">
       <view class='marginBottom'>
         <van-cell
           title=" 以下机子记录有误："
@@ -34,6 +34,25 @@
       />
     </block>
   
+    <block wx:if="{{deviceConfirmList.length != 0}}">
+      <view class='marginTop'>
+        <van-cell
+          title=" 以下机子已被确认："
+          size="large"
+          icon="checked"
+        />
+
+        <block wx:for="{{deviceConfirmList}}">
+  
+          <van-cell
+            title="{{item}}"
+            size="large"
+          />
+        </block>
+ 
+      </view>   
+    </block>
+
   </view>
       
   <button class = "fixButton goodBtn" bindtap="copyCode">扫描机身二维码</button>

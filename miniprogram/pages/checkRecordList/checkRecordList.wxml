@@ -1,0 +1,11 @@
+<!--miniprogram/pages/checkRecordList/checkRecordList.wxml-->
+<block wx:for="{{checkSummary}}">
+  
+          <van-cell
+            title="{{item.operator}}"
+            value="{{item.savedate}}"
+            size="large"
+            is-link
+            url="../addFunction/addFunction?id={{item._id}}"
+          />
+        </block>

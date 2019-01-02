@@ -2,6 +2,23 @@
 const app = getApp()
 
 Page({
+
+  onLoad: function (options) {
+    wx.getSetting({
+      success: function (res) {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({
+            success: function (res) {
+              app.globalData.operatorInfo = res.userInfo.nickName
+            }
+          })
+        }
+      }
+    })
+  },
+
+
   data: {
     avatarUrl: './user-unlogin.png',
     userInfo: {},
@@ -9,12 +26,25 @@ Page({
     takeSession: false,
     requestResult: '',
     show: "",
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
-  load:function(){
 
-  },
+ //bindGetUserInfo: function (e) {
+  //  console.log(e.detail.userInfo)
+  //},
   
+  load: function() {
+    // 调用云函数
+    wx.navigateTo({
+      url: "../checkRecordList/checkRecordList",
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
+  },
+
+
   click: function () {
     var that = this;
     var show;
@@ -22,8 +52,17 @@ Page({
       success: (res) => {
         if(res.result.indexOf("data")!=-1){
         app.globalData.cResult = res.result.slice(7);
+          if (app.globalData.operatorInfo == undefined) {
+            wx.getUserInfo({
+              success: function (res2) {
+                //console.log(res2.userInfo.nickName)
+                app.globalData.operatorInfo = res2.userInfo.nickName
+                //console.log(app.globalData.operatorInfo)
+              }
+            })
+            }
         wx.navigateTo({
-          url: "../addFunction/addFunction",
+          url: "../addFunction/addFunction?id="+"NA",
           success: function(res) {},
           fail: function(res) {},
           complete: function(res) {},

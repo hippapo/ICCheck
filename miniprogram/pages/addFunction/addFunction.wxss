@@ -5,6 +5,9 @@
 .marginBottom {
   margin-bottom: 20px
 }
+.marginTop {
+  margin-top: 20px
+}
 
 .scan{
   position: fixed;

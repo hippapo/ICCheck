@@ -3,5 +3,5 @@
   <!-- 扫一扫 DMS 码 -->
     <!--button bindtap="click" class='scanDMSBtn'>扫描机库</button-->
     <button wx:if="{{canIUse}}" class='scanDMSBtn'open-type="getUserInfo" bindgetuserinfo="click">扫描机库</button><view wx:else>请升级微信版本</view>
-    <button bindtap="load">读取</button> 
+    <button bindtap="load" class='load'>读取记录</button>
 </view>

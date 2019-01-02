@@ -9,18 +9,63 @@
   margin-top: 20px
 }
 
-.fixButton{
+.scan{
   position: fixed;
   z-index: 9999;
   margin-bottom: 16px;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  text-align: center
+  bottom: 0px;
+  left: 0px;
+  width: 50%;
+  border-radius:0px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #bd9b9b;
+  color: #fff;
+  background-color: #353535;
+  font-family: 微软雅黑;
+}
+
+.save{
+  position: fixed;
+  z-index: 9999;
+  margin-bottom: 16px;
+  bottom: 0px;
+  right: 0px;
+  width: 50%;
+  border-radius:0px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #bd9b9b;
+  color: #fff;
+  background-color: #353535;
+  font-family: 微软雅黑;
+}
+
+.detail{
+  right: 0px;
+  font-family: 微软雅黑;
+  width:18%;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  border-width: 0px;
+  padding: 0px;
+  margin: 0px 0px 0px 65%;
+  font-size: 14px;
+}
+
+.detail-button-none-border::after{
+  outline: none;
+  list-style: none;
+  border: none;
 }
 
 .positionForFixedBtn {
   margin-bottom: 70px;
-  width: 100%
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
 }
 
+.maxWidth{
+  width: 100%;
+}

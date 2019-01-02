@@ -36,7 +36,7 @@ Page({
     }
   },
 
-  saveRecord: function () {
+   saveRecord: function () {
     wx.cloud.callFunction({
       // 云函数名称
       name: 'saveCheckRecords',
@@ -56,11 +56,29 @@ Page({
           icon: 'success',
           duration: 3000
         })
-        //console.log(res.result.data[0].description) // 3
       },
       fail: console.error
-    })
   },
+        //console.log(res.result.data[0].description) // 3
+
+  getDeviceInfo: function(e) {
+    console.log(e.currentTarget.dataset.deviceid.split(',')[0])
+    wx.cloud.callFunction({
+      // 云函数名称
+      name: 'getDevicesInfo',
+      // 传给云函数的参数
+      data: {
+        id: e.currentTarget.dataset.deviceid.split(',')[0],
+      },
+      success(res) {
+        console.log(res.result.data.location)
+        console.log(res.result.data)
+        wx.navigateTo({
+          url: "../deviceInfo/deviceInfo?location=" + res.result.data.location + "&name=" + res.result.data.name + "&os=" + res.result.data.os + "&pic=" + res.result.data.pic
+        })
+    }
+  },
+
   copyCode: function() {
     var that = this;
     var show;

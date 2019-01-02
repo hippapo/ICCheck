@@ -1,0 +1,45 @@
+/* pages/deviceInfo/deviceInfo.wxss */
+
+.pic-container{
+  width: 100% - 30px;
+  /* background-color: #e29a9a; */
+  padding: 10px 15px;
+  margin: 20px 0px;
+  border: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.device-info-container{
+  width: 100%;
+  /* background-color: #6fe994; */
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.device-info{
+  width: 100% - 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 3px 15px;
+  border-top: 1px;
+  border-bottom: 1px;
+  border-left: 0px;
+  border-right: 0px;
+  border-style: solid;
+  border-color: #e2dada8e;
+}
+
+.info-title{
+  width: 36%;
+  /* background-color: #8bf58b */
+}
+
+.device-image{
+  width: 540rpx;
+  height: 680rpx;
+}
+

@@ -29,6 +29,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
+
  //bindGetUserInfo: function (e) {
   //  console.log(e.detail.userInfo)
   //},

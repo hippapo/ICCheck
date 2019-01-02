@@ -3,7 +3,22 @@
 .scanDMSBtn {
   font-family: 微软雅黑;
   position: absolute;
-  bottom: 20%;
+  bottom: 22%;
+  right: 15%;
+  width: 40%;
+
+  color: #fff;
+  background-color: #353535;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #bd9b9b;
+  border-radius:10px;
+}
+
+.load {
+  font-family: 微软雅黑;
+  position: absolute;
+  bottom: 8%;
   right: 15%;
   width: 40%;
 

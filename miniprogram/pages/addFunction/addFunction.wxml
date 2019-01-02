@@ -1,5 +1,5 @@
 <view class="container">
-<button bindtap="saveRecord">保存</button>
+
   <view class="guide" class='positionForFixedBtn'>
 
     <block wx:if="{{deviceNotFoundList.length != 0}}">
@@ -56,5 +56,5 @@
   </view>
       
   <button class = "scan" bindtap="copyCode">扫描</button>
-  <button class = "save" bindtap="">保存</button>
+  <button class = "save" bindtap="saveRecord">保存</button>
 </view>

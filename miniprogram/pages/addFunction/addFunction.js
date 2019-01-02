@@ -58,6 +58,7 @@ Page({
         })
       },
       fail: console.error
+    })
   },
         //console.log(res.result.data[0].description) // 3
 
@@ -76,7 +77,8 @@ Page({
         wx.navigateTo({
           url: "../deviceInfo/deviceInfo?location=" + res.result.data.location + "&name=" + res.result.data.name + "&os=" + res.result.data.os + "&pic=" + res.result.data.pic
         })
-    }
+      }
+    })
   },
 
   copyCode: function() {
@@ -139,7 +141,4 @@ Page({
       
     })
   }
-
-
 })
-

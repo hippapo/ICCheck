@@ -13,8 +13,5 @@ App({
       operatorInfo: "null" 
     }
     this.globalData = {}
-  
-
-
   }
 })

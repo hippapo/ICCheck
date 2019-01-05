@@ -36,6 +36,21 @@ Page({
     }
   },
 
+  add0: function (m) { return m < 10 ? '0' + m : m },
+
+  format: function (shijianchuo) {
+    //shijianchuo是整数，否则要parseInt转换
+    var time = new Date(shijianchuo);
+    var y = time.getFullYear();
+    var m = time.getMonth()+1;
+    var d = time.getDate();
+    var h = time.getHours();
+    var mm = time.getMinutes();
+    var s = time.getSeconds();
+    return y + '-' + this.add0(m) + '-' + this.add0(d) + ' ' + this.add0(h) + ':' + this.add0(mm) + ':' + this.add0(s);
+  },
+
+
    saveRecord: function () {
     wx.cloud.callFunction({
       // 云函数名称
@@ -47,7 +62,8 @@ Page({
         pendingList: this.data.deviceList,
         issueList: this.data.deviceNotFoundList,
         //savedate: new Date().gettime(),
-        savedate: new Date().toLocaleString(),
+        savedate: this.format(new Date().getTime()),
+        savedatestring: new Date().getTime(),
       },
       
       success(res) {

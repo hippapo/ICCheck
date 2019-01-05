@@ -34,18 +34,21 @@ Page({
   //  console.log(e.detail.userInfo)
   //},
   
-  load: function() {
+  load: function(e) {
     // 调用云函数
+    if (e.detail.userInfo) {
     wx.navigateTo({
       url: "../checkRecordList/checkRecordList",
       success: function (res) { },
       fail: function (res) { },
       complete: function (res) { },
     })
+    }else{}
   },
 
 
-  click: function () {
+  click: function (e) {
+    if(e.detail.userInfo){
     var that = this;
     var show;
     wx.scanCode({
@@ -91,5 +94,6 @@ Page({
       complete: (res) => {
       }
     })
+    }else{}
   }
 })

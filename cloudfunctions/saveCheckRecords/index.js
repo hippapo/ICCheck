@@ -13,6 +13,7 @@ exports.main = async (event, context) => db.collection('checkRecordList').add({
     pendingList: event.pendingList,
     issueList: event.issueList,
     savedate: event.savedate,
+    savedatestring: event.savedatestring
     //done: false,
     // due: new Date('2018-09-01'),
     // style: {"color": "blue"},

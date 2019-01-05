@@ -1,11 +1,14 @@
 // 云函数入口文件
 const cloud = require('wx-server-sdk')
 
-cloud.init(
-)
+cloud.init({
+})
 const db = cloud.database()
 exports.main = async (event, context) => db.collection('checkRecordList').field({ operator: true,
-savedate: true}).get()
+  savedate: true,
+  savedatestring: true
+}).orderBy('savedatestring', 'desc')
+.get()
 // exports.main = async (event, context) => db.collection('checkRecordList').field({
 //   operator: true,
 //   issueList: false,
